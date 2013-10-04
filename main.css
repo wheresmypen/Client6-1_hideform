@@ -1,0 +1,37 @@
+.home{
+
+	width:100%;
+
+}
+
+.whole{
+	width:50%;
+	border-style: solid;
+	margin-bottom: 50px;
+	min-height: 200px;
+}
+
+form{
+	width:100%;
+}
+
+.fields{
+	background-color: lightgreen;
+}
+
+.profile{
+	width:100%;
+	text-align: center;
+	max-height: 250px;
+}
+
+li{
+	border-radius: 15px;
+	background-color: #EEEEEE;
+	border-style: solid;
+	display: block;
+	float: left;
+	margin: 25px;
+	}
+
+
