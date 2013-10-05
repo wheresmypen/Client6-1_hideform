@@ -2,6 +2,7 @@ $(document).ready(function(){
 
 var inputText = [];
 var open="not";
+var returnString=""
 
 var collectProfile = function(){
 
@@ -9,10 +10,16 @@ var collectProfile = function(){
 		inputText.push($(this).val())
 	});
 
-	$("#help1").append(inputText[0]);
-	$("#help2").append(inputText[1]);
-	$("#help3").append(inputText[2]);
-	$("#help4").append(inputText[3]);
+    returnString = "Please meet {0}".supplant(inputText);
+    console.log(returnString);
+	// $("#help1").append(inputText[0]);
+	// $("#help2").append(inputText[1]);
+	// $("#help3").append(inputText[2]);
+	// $("#help4").append(inputText[3]);
+	personalInfo = "This is a little information about {0}<br>{1}<br>{0} reads {2}<br>But, when working with jQuery, {0} reads {3}.".supplant(inputText);
+	$("#help1").append(returnString);
+	$("#help2").append(personalInfo);
+
 	return false;
 
 };
@@ -30,6 +37,8 @@ var showForm = function(){
 	}
 
 };
+
+
 
 
 $("#shower").on("click",showForm);

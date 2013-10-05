@@ -47,10 +47,12 @@ form{
 li{
 	border-radius: 15px;
 	background-color: #EEEEEE;
-	border-style: solid;
+	border-style: dashed;
 	display: block;
 	float: left;
 	margin: 25px;
+	padding:10px;
+	padding-bottom: 25px;
 	}
 
 
