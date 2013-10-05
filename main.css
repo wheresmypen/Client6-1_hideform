@@ -8,7 +8,13 @@
 	width:50%;
 	border-style: solid;
 	margin-bottom: 50px;
+	margin-left:auto;
+	margin-right:auto;
 	min-height: 200px;
+}
+
+.input{
+	display: none;
 }
 
 form{
@@ -22,8 +28,21 @@ form{
 .profile{
 	width:100%;
 	text-align: center;
+
+
 	max-height: 250px;
 }
+
+#shower{
+	background-color:lightblue;
+}
+
+.btn-group{
+	width:100%;
+	margin-left: 48%;
+	margin-right: 0px;
+}
+
 
 li{
 	border-radius: 15px;

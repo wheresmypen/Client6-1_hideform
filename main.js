@@ -1,20 +1,9 @@
 $(document).ready(function(){
 
 var inputText = [];
-var text = document.name
+var open="not";
 
-console.log(name);
-
-var jeez = function(){
-	console.log("inside")
-}
-
-// $("submit").onSubmit,(jeez()
-// );
-
-// $("form").submit(function)
-
-var fan = function(){
+var collectProfile = function(){
 
     $('.fields').each(function(){
 		inputText.push($(this).val())
@@ -28,26 +17,24 @@ var fan = function(){
 
 };
 
+var showForm = function(){
+	if (open){
+		$(".input").show();
+		$("#shower").text("Hide");
+		open="";
+	}
+	else {
+		$("#shower").text("Show");
+		$(".input").hide();
+		open="not";
+	}
 
-// $('.fields').each(function(){
-// 	inputText.push($(this).val())
-// 	});
-
-
-
-// $(#help).supplant(inputText);
-
-
-
-
-// for (var i=0; i<4; i++){
-// 	var a ="#input"+i;
-// 	inputText.push(a);
-// 	console.log(a);
-// }
+};
 
 
-$("#harmful").on("submit",fan);
+$("#shower").on("click",showForm);
+$("#harmful").on("submit",collectProfile);
+
 
 
 
