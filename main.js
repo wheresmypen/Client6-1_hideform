@@ -2,7 +2,9 @@ $(document).ready(function(){
 
 var inputText = [];
 var open="not";
-var returnString=""
+var returnString="";
+
+$("#help").hide();
 
 var collectProfile = function(){
 
@@ -11,14 +13,16 @@ var collectProfile = function(){
 	});
 
     returnString = "Please meet {0}".supplant(inputText);
-    console.log(returnString);
-	// $("#help1").append(inputText[0]);
-	// $("#help2").append(inputText[1]);
-	// $("#help3").append(inputText[2]);
-	// $("#help4").append(inputText[3]);
 	personalInfo = "This is a little information about {0}<br>{1}<br>{0} reads {2}<br>But, when working with jQuery, {0} reads {3}.".supplant(inputText);
-	$("#help1").append(returnString);
+    $("#help1").append(returnString);
 	$("#help2").append(personalInfo);
+    $('.fields').each(function(){
+        console.log($(this).val());
+        if($(this).val()){
+            console.log($(this).val());
+            $("#help").show();
+        }
+    });
 
 	return false;
 
@@ -27,11 +31,11 @@ var collectProfile = function(){
 var showForm = function(){
 	if (open){
 		$(".input").show();
-		$("#shower").text("Hide");
+		$("#shower").text("Click to hide form");
 		open="";
 	}
 	else {
-		$("#shower").text("Show");
+		$("#shower").text("Click to show form");
 		$(".input").hide();
 		open="not";
 	}
